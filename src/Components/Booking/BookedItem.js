@@ -10,7 +10,7 @@ const BookedItem = ({BookedItem}) => {
             <h3>{name}</h3>
             <h5>Cost: {cost}</h5>
             <h5>Description: <p>{description}</p></h5>
-            <Link><button className="btn btn-warning">Book This Service</button></Link>
+            <Link to = '/shipping'><button className="btn btn-warning">Book This Service</button></Link>
         </div>
     );
 };
