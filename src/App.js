@@ -1,11 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import Booking from './Components/Booking/Booking';
 import AuthProvider from './Components/context/AuthProvider';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
+import NotFound from './Components/NotFound/NotFound';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -24,6 +27,12 @@ function App() {
           </Route>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <PrivateRoute path="/Booking/:serviceId">
+            <Booking></Booking>
+          </PrivateRoute>
+          <Route exact path="*">
+            <NotFound></NotFound>
           </Route>
         </Switch>
         <Footer></Footer>

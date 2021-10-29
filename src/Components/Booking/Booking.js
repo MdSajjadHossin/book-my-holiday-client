@@ -1,27 +1,29 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import Service from '../Service/Service';
-import './Services.css';
+import BookedItem from './BookedItem';
+import './Booking.css';
+// import { Link } from 'react-router-dom';
 
-const Services = () => {
-    const [services, setServices] = useState([])
+
+const Booking = () => {
+    const [booking, setBooking] = useState([])
     useEffect(() => {
         const url = `https://floating-basin-70468.herokuapp.com/services`;
         fetch(url)
             .then(res => res.json())
-            .then(data => setServices(data));
+            .then(data => setBooking(data));
     }, [])
     return (
-        <div id="services">
-            <h2 style={{overflow:'hidden'}}>Our Services</h2>
+        <div >
+            <h2>Our Services</h2>
             <div className="service-container">
                 {
-                    services.map(service => <Service
-                        key={service._id
+                    booking.map(booked => <BookedItem
+                        key={booked._id
                         }
-                        service={service}
-                    ></Service>
+                        BookedItem={booked}
+                    ></BookedItem>
                     )
                     
                 }
@@ -30,4 +32,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default Booking;
