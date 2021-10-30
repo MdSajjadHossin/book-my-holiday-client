@@ -1,6 +1,14 @@
 .addItem-container{
-    border: 5px solid;
+    /* border: 5px solid white; */
     align-items: center;
     width: 50%;
-    margin: 20px;
+    margin: auto;
+}
+.shipping-form{
+    margin: auto;
+    display: block;
+}
+.description-area{
+    align-items: center;
+    justify-content: center;
 }

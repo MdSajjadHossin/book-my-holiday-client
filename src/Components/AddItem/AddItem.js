@@ -25,11 +25,11 @@ const AddItem = () => {
     return (
         <div className = "addItem-container">
             <h3>Add Items</h3>
-            <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
+            <form className="shipping-form w-auto" onSubmit={handleSubmit(onSubmit)}>
             <input placeholder="Product Name" defaultValue="" {...register("name")} />
             <input placeholder="Image URL" defaultValue="" {...register("serviceImg")} />
             <input placeholder="Cost" defaultValue="" {...register("cost")} />
-            <textarea className="mt-3" placeholder="Description" defaultValue="" {...register("description")} />
+            <textarea className="mt-3  description-area" placeholder="Description" defaultValue="" {...register("description")} />
 
             <input type="submit" />
             </form>
