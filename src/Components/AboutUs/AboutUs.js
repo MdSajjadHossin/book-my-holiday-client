@@ -11,7 +11,7 @@ const AboutUs = () => {
             <div>
             <img className="about-us-img"  src={aboutus} alt="" />
             </div>
-            <div  className="m-5 p-5 text-light bg-danger">
+            <div  className="m-auto p-auto text-light bg-danger about-Us-text w-auto">
                 <h3>Book</h3>
                 <h2>My Holiday</h2>
                 <p>We are  Book My Holiday Group with over 45,100 employees and over 400 million members, making it one of the leading online travel agencies in the world.With more than 1.4 million hotels in 200 countries and regions, we've built an extensive hotel network to give our customers a fantastic choice of accommodation. Our far-reaching flight network has over 2 million individual flight routes connecting more than 5,000 cities around the globe.</p>

@@ -11,7 +11,7 @@ import falls from '../../Images/slide2-7.jpg';
 const FamousPlaces = () => {
     return (
         <>
-        <div id="famousPlaces" className="w-75 famous-carusal">
+        <div id="famousPlaces" className="w-auto m-3 ">
         <h2 className=" mt-3 bg-primary ">Famous Palces You Can Explore</h2>
         <Carousel fade>
             <Carousel.Item>
