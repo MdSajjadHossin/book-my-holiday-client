@@ -1,19 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './Order.css';
 
 const Order = ({orders}) => {
     const [deleteOrder, setdeleteOrder] = useState([]);
-
-    useEffect(()=>{
-        fetch('https://floating-basin-70468.herokuapp.com/orders')
-        .then(res => res.json())
-        .then(data => setdeleteOrder(data))
-    },[]);
     //DELETE AN USER
     const handleDeleteUser = id =>{
        const proceed = window.confirm('Are You Sure You Wnat To DELETE???');
        if(proceed){
-        const url = `https://floating-basin-70468.herokuapp.com/orders/${id}`;
+        const url = `https://floating-basin-70468.herokuapp.com/orders`;
         fetch(url, {
             method: 'DELETE'
         })

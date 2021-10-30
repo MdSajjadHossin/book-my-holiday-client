@@ -10,8 +10,6 @@ const ManageOrder = () => {
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [])
-    
-
     return (
         <div>
             <div className="manageOrder-container">
@@ -23,9 +21,11 @@ const ManageOrder = () => {
                     ></Order>
                     )
                 }
+
             </div>
         </div>
-    );
+    )
+    
 };
 
 export default ManageOrder;

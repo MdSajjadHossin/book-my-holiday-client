@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import AboutUs from './Components/AboutUs/AboutUs';
 import AddItem from './Components/AddItem/AddItem';
 import Booking from './Components/Booking/Booking';
 import AuthProvider from './Components/context/AuthProvider';
@@ -47,6 +48,9 @@ function App() {
           <PrivateRoute path="/addItem">
             <AddItem></AddItem>
           </PrivateRoute>
+          <Route path="/aboutUs">
+            <AboutUs></AboutUs>
+          </Route>
           <Route exact path="*">
             <NotFound></NotFound>
           </Route>

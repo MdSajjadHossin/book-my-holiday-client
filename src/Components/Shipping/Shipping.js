@@ -34,7 +34,6 @@ const Shipping = () => {
             <input placeholder="Address" defaultValue="" {...register("address")} />
             <input placeholder="City" defaultValue="" {...register("city")} />
             <input placeholder="phone number" defaultValue="" {...register("phone")} />
-
             <input type="submit" />
             </form>
         </div>
