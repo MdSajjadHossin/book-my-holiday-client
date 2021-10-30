@@ -4,22 +4,22 @@ import useAuth from '../hooks/useAuth';
 import './Shipping.css';
 
 const Shipping = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { user } = useAuth();
     const onSubmit = data => {
-        // console.log(data)
-
-        fetch(`https://floating-basin-70468.herokuapp.com/orders`, {
-            
+        fetch('https://floating-basin-70468.herokuapp.com/orders', {
             method: 'POST',
             headers:{
-                'content-type':'application/json'
+                'content-type': 'application/json'
             },
             body: JSON.stringify(data)
         })
         .then(res => res.json())
         .then(result =>{
-            console.log(result);
+            if(result.insertedId){
+                alert('Order Processed Successfully');
+                reset();
+            }
         })
     };
     return (
