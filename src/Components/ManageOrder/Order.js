@@ -7,7 +7,7 @@ const Order = ({orders}) => {
     const handleDeleteUser = id =>{
        const proceed = window.confirm('Are You Sure You Wnat To DELETE???');
        if(proceed){
-        const url = `https://floating-basin-70468.herokuapp.com/orders`;
+        const url = `https://floating-basin-70468.herokuapp.com/orders/{id}`;
         fetch(url, {
             method: 'DELETE'
         })

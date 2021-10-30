@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Order from './Order';
 import './ManageOrder.css';
 
-const ManageOrder = () => {
+const ManageOrder = (id) => {
     const [orders, setOrders] = useState([])
     useEffect(() => {
         const url = `https://floating-basin-70468.herokuapp.com/orders`;
