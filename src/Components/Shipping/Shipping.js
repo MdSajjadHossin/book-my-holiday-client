@@ -17,7 +17,7 @@ const Shipping = () => {
         .then(res => res.json())
         .then(result =>{
             if(result.insertedId){
-                alert('Order Processed Successfully');
+                alert('Order Processed Successfully!! Our Team Will Communicate With You Quickly');
                 reset();
             }
         })
