@@ -4,6 +4,7 @@ import './App.css';
 import AddItem from './Components/AddItem/AddItem';
 import Booking from './Components/Booking/Booking';
 import AuthProvider from './Components/context/AuthProvider';
+import FamousPlaces from './Components/FamousPlaces/FamousPlaces';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <Route path="/famoudPlaces">
+            <FamousPlaces></FamousPlaces>
           </Route>
           <PrivateRoute path="/Booking/:serviceId">
             <Booking></Booking>
